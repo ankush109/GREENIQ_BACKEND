@@ -157,7 +157,7 @@ const materialController = {
   },
   async getallSubjects(req, res, next) {
     try {
-      const { classname } = req.body;
+      const classname = req.user.classname;
       const findclassId = await prisma.class.findFirst({
         where: {
           name: classname,
