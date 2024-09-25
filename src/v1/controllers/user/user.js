@@ -287,20 +287,7 @@ res.status(400).json({
         },
         include:{
           
-          tests:{
-          
-            include:{
-              attempts:{
-                include:{
-                  submissions:{
-                    include:{
-                      question:true
-                    }
-                  }
-                }
-              }
-            }
-          },
+        
           TestAttempt:true
         
         },
