@@ -285,12 +285,7 @@ res.status(400).json({
         where: {
           id: req.user.id,
         },
-        include:{
-          
-        
-          TestAttempt:true
-        
-        },
+       
       
       });
       res.json(customResponse(200, user));
