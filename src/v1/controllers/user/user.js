@@ -285,6 +285,26 @@ res.status(400).json({
         where: {
           id: req.user.id,
         },
+        include:{
+          
+          tests:{
+          
+            include:{
+              attempts:{
+                include:{
+                  submissions:{
+                    include:{
+                      question:true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          TestAttempt:true
+        
+        },
+      
       });
       res.json(customResponse(200, user));
     } catch (err) {
